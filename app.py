@@ -11,13 +11,14 @@ sock.listen(5)
 sock.setblocking(0)
 @app.route('/')
 def hello_world():
-    try:
+'''    try:
         conn, addr = sock.accept()
         data = conn.recv(1024)
         conn.close()
         return data
     except BlockingIOError:
-        return 'hi'
+        return 'hi'''
+    return "hello"
 
 
 if __name__=='__main__':
